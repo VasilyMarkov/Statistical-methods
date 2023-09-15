@@ -19,7 +19,7 @@ def noisy_signal(signal):
 points = random.sample(range(1000), 1000)
 function = noisy_signal(x)
 
-gf_min = function[0] #Global minimum
+gf_min = function[0]
 gx_min = 0
 for x in points[2:]:
     if function[x] < gf_min:
