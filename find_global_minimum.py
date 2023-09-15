@@ -15,19 +15,19 @@ def noisy_signal(signal):
 
 # Monte-Carlo Method
 
-def f(x):
-    return
 
 points = random.sample(range(1000), 1000)
-print(points[0])
-x_ref = noisy_signal(points[0])
+function = noisy_signal(x)
 
+gf_min = function[0] #Global minimum
+gx_min = 0
 for x in points[2:]:
-    if noisy_signal(x) < x_ref:
-        x_ref = noisy_signal(x)
-
+    if function[x] < gf_min:
+        gf_min = function[x]
+        gx_min = x
+print(gx_min, gf_min)
 fig, axis = plt.subplots()
 
-axis.plot(t, noisy_signal(x), linewidth=2.0)
+axis.plot(t, function, linewidth=2.0)
 
 plt.show()
