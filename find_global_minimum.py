@@ -1,5 +1,4 @@
 import random
-
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -25,7 +24,7 @@ for x in points[2:]:
     if function[x] < gf_min:
         gf_min = function[x]
         gx_min = x
-print(gx_min, gf_min)
+print(f'Global minimum, x: {gx_min}, y: {gf_min}')
 fig, axis = plt.subplots()
 
 axis.plot(t, function, linewidth=2.0)
